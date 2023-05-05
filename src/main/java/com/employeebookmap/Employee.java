@@ -7,6 +7,8 @@ public class Employee {
     private String lastName;
     private final int idOfEmployee;
     private static int ID;
+    private int department;
+    private int salary;
 
     public Employee(String firstName, String lastName) {
         this.firstName = firstName;

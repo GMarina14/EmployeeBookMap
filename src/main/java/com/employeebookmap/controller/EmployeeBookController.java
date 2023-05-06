@@ -38,7 +38,7 @@ public class EmployeeBookController {
     public String findEmployee(@RequestParam(required = true) String firstName,
                                @RequestParam(required = true) String lastName) {
 
-        return firstName+ ' ' + lastName+", id " +employeeBookServiceImpl.findEmployee(firstName, lastName);
+        return employeeBookServiceImpl.findEmployee(firstName, lastName).toString();
     }
 
     @GetMapping(path = "/printAll")

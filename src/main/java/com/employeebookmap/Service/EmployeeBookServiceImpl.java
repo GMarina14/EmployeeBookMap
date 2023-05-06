@@ -39,11 +39,11 @@ public class EmployeeBookServiceImpl implements EmployeeBookService {
     }
 
     @Override
-    public int findEmployee(String firstName, String lastName) throws EmployeeNotFoundException {
+    public Employee findEmployee(String firstName, String lastName) throws EmployeeNotFoundException {
         String str = firstName + ' ' + lastName;
         if (employeeBookTwo.containsKey(str)) {
             System.out.println("Employee is found");
-            return employeeBookTwo.get(str).getIdOfEmployee();
+            return employeeBookTwo.get(str);
         } else {
             throw new EmployeeNotFoundException("Employee not found");
         }

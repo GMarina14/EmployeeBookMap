@@ -13,5 +13,5 @@ public interface EmployeeBookService {
 
     public void removeEmployee(String firstName, String lastName);
 
-    public int findEmployee(String firstName, String lastName);
+    public Employee findEmployee(String firstName, String lastName);
 }
